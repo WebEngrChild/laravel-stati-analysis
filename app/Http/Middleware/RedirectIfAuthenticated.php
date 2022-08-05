@@ -16,8 +16,8 @@ final class RedirectIfAuthenticated
      *
      * @param \Illuminate\Http\Request $request
      * @param  \Closure(\Illuminate\Http\Request): (\Illuminate\Http\Response|\Illuminate\Http\RedirectResponse)  $next
-     * @param string|null ...$guards
-     * @return \Illuminate\Http\Response|\Illuminate\Http\RedirectResponse
+     * @param null|string ...$guards
+     * @return \Illuminate\Http\RedirectResponse|\Illuminate\Http\Response
      */
     public function handle(Request $request, Closure $next, ...$guards)
     {

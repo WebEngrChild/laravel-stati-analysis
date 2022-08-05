@@ -1,7 +1,8 @@
 name: fix
 
 on:
-  push:
+  - push
+  - pull_request
 
 jobs:
   fix:
@@ -20,4 +21,4 @@ jobs:
     - name: Run psalm
       run: ./vendor/bin/psalm
     - name: Run php-cs-fixer
-      run: ./vendor/bin/php-cs-fixer fix -v --diff
+      run: ./vendor/bin/php-cs-fixer fix -v --diff --dry-run

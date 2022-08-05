@@ -56,13 +56,16 @@
         "psalm": [
             "@php ./vendor/bin/psalm"
         ],
+        "dry-lint": [
+            "@php ./vendor/bin/php-cs-fixer fix -v --diff --dry-run"
+        ],
         "lint": [
-            "@php ./vendor/bin/php-cs-fixer fix --diff --dry-run --config ./.php_cs-fixer.dist.php"
+            "@php ./vendor/bin/php-cs-fixer fix -v --diff"
         ],
         "fix": [
             "@php ./vendor/bin/phpstan analyse -c phpstan.neon --memory-limit=1G",
             "@php ./vendor/bin/psalm",
-            "@php ./vendor/bin/php-cs-fixer fix -v --diff"
+            "@php ./vendor/bin/php-cs-fixer fix -v --diff --dry-run"
         ]
     },
     "extra": {

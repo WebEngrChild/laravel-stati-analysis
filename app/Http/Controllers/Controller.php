@@ -14,4 +14,7 @@ final class Controller extends BaseController
     use AuthorizesRequests;
     use DispatchesJobs;
     use ValidatesRequests;
+
+     // 以下を追記します
+     public function csFixerError(): string{$hoge = 'hoge';$huga = 'huga';return $hoge . $huga;}
 }
